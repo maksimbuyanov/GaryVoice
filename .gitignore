@@ -1,1 +1,5 @@
 key.json
+yarn-error.log
+/node_modules
+/.idea
+/dist
