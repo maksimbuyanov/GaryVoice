@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "dev": "nodemon ./dist/main.js",
     "start": "node ./dist/main.js",
@@ -12,11 +12,16 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/config": "^3.3.0",
     "@types/node": "^18.16.2",
     "cross-env": "^7.0.3",
     "nodemon": "^2.0.22",
     "ts-node": "^10.9.1",
     "tsc": "^2.0.4",
     "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "config": "^3.3.9",
+    "telegraf": "^4.12.2"
   }
 }
