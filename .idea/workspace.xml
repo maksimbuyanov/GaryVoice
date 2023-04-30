@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="234e1165-f591-4137-b7c7-cbb735dc64c6" name="Changes" comment="update gitignore, add tsc, nodemon">
-      <change afterPath="$PROJECT_DIR$/src/Bot.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/actions/start.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="234e1165-f591-4137-b7c7-cbb735dc64c6" name="Changes" comment="'hello world' bot">
+      <change afterPath="$PROJECT_DIR$/src/Ogg.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Openai.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/onTextMessage.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/voices/.keep" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
@@ -24,6 +26,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2P4dU8sjBbMZIkNxp43gyH7FTzI" />
   <component name="ProjectViewState">
@@ -97,7 +102,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1682720300951</updated>
-      <workItem from="1682720301867" duration="8491000" />
+      <workItem from="1682720301867" duration="22519000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1682720711726</created>
@@ -134,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682761653687</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="'hello world' bot">
+      <created>1682773269189</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1682773269189</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,7 +167,8 @@
     <MESSAGE value="init" />
     <MESSAGE value="add gitignore" />
     <MESSAGE value="update gitignore, add tsc, nodemon" />
-    <option name="LAST_COMMIT_MESSAGE" value="update gitignore, add tsc, nodemon" />
+    <MESSAGE value="'hello world' bot" />
+    <option name="LAST_COMMIT_MESSAGE" value="'hello world' bot" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
