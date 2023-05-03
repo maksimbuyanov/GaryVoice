@@ -1,7 +1,6 @@
 import axios from 'axios'
 import { createWriteStream, unlink } from 'fs'
 import { dirname, resolve } from 'path'
-// import { fileURLToPath } from "url";
 import ffmpeg from 'fluent-ffmpeg'
 import installer from '@ffmpeg-installer/ffmpeg'
 

@@ -38,7 +38,7 @@ class Openai {
       })
       return response.data.choices[0].message?.content ?? 'Чат не ответил...'
     } catch (e) {
-      console.log('Error while transcription ' + JSON.stringify(e))
+      console.log('Error while chat ' + JSON.stringify(e))
       throw new Error('error')
     }
   }
