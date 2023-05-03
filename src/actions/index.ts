@@ -1,2 +1,2 @@
-export {startFn} from './start'
-export {onTextMessage} from './onTextMessage'
+export { startFn } from './start.js'
+export { onTextMessage } from './onTextMessage.js'

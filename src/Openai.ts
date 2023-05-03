@@ -1,38 +1,34 @@
-import { Configuration, OpenAIApi } from "openai";
-import { createReadStream } from "fs";
-import config from "config";
-import { unlink } from "fs";
-import { ogg } from "./Ogg";
+import { Configuration, OpenAIApi } from 'openai'
+import { createReadStream } from 'fs'
+import config from 'config'
+import { ogg } from './Ogg.js'
 
 class Openai {
   constructor(apiKey: string) {
     const configuration = new Configuration({
       apiKey,
-    });
-    this.openai = new OpenAIApi(configuration);
+    })
+    this.openai = new OpenAIApi(configuration)
   }
 
-  openai: OpenAIApi;
+  openai: OpenAIApi
 
   async transcription(filePath: string): Promise<string> {
     try {
       const response = await this.openai.createTranscription(
         createReadStream(filePath),
-        "whisper-1"
-      );
+        'whisper-1'
+      )
 
-      const isSuccessDeleted = await ogg.deleteFile(filePath);
-      if (isSuccessDeleted) return response.data.text;
-      throw new Error("Error while deleted");
-    } catch (e: any) {
-      if ("message" in e) {
-        console.log("Error while transctiption " + e.message);
-      } else {
-        console.log("Error while transctiption " + JSON.stringify(e));
-      }
-      throw new Error(e.message);
+      const isSuccessDeleted = await ogg.deleteFile(filePath)
+      if (isSuccessDeleted) return response.data.text
+      throw new Error('Error while deleted')
+    } catch (e: unknown) {
+      console.log('Error while transcription ' + JSON.stringify(e))
+
+      throw new Error('error')
     }
   }
 }
 
-export const openai = new Openai(config.get("OPENAI_KEY"));
+export const openai = new Openai(config.get('OPENAI_KEY'))

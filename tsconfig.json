@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "noImplicitAny": true,
-    "moduleResolution": "node",
+    "moduleResolution": "Node16",
     "allowJs": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
@@ -12,17 +12,17 @@
     "strictNullChecks": true,
     "strict": true,
     "sourceMap": true,
-    "module": "CommonJS",
-    "target": "ES2015",
+    "module": "ESNext",
+    "target": "ES2018",
     "lib": ["es2021"],
     "skipLibCheck": true,
     "resolveJsonModule": true
   },
-  "exclude": ["./node_modules/**/*.*", "node_modules/**/*.*"],
+  "exclude": ["./node_modules/**/*.*", "node_modules/**/*.*", "node_modules"],
   "include": ["./src/**/*"],
   "ts-node": {
     "compilerOptions": {
-      "module": "CommonJS"
+      "module": "ESNext"
     }
   }
 }

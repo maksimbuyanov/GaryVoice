@@ -4,14 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="234e1165-f591-4137-b7c7-cbb735dc64c6" name="Changes" comment="'hello world' bot">
-      <change afterPath="$PROJECT_DIR$/src/Ogg.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Openai.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/actions/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/actions/onTextMessage.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/voices/.keep" afterDir="false" />
+    <list default="true" id="234e1165-f591-4137-b7c7-cbb735dc64c6" name="Changes" comment="add save odd, convert to mp3, transcription file">
+      <change afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.prettierrc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nodemon.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Bot.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bot.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ogg.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ogg.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Openai.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Openai.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/onTextMessage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/onTextMessage.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/start.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/start.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
@@ -35,25 +40,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "javascript.nodejs.core.library.configured.version": "18.15.0",
-    "javascript.nodejs.core.library.typings.version": "18.15.0",
-    "last_opened_file_path": "/Users/maksim/PhpstormProjects/gary_voice",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "yarn",
-    "prettierjs.PrettierConfiguration.Package": "/usr/local/lib/node_modules/prettier",
-    "settings.editor.selected.configurable": "settings.javascript.prettier",
-    "ts.external.directory.path": "/Applications/PhpStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;18.15.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.15.0&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/maksim/PhpstormProjects/gary_voice/node_modules&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/maksim/PhpstormProjects/gary_voice/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.eslint&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/maksim/PhpstormProjects/gary_voice/node_modules/typescript/lib&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -66,7 +73,7 @@
       <recent name="$PROJECT_DIR$/src/actions/start.ts" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev">
+  <component name="RunManager" selected="npm.lint:ts:fix">
     <configuration name="commpile" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -87,9 +94,31 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="lint:ts:fix" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="lint:ts:fix" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="nodemon" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="nodemon" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.lint:ts:fix" />
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.nodemon" />
         <item itemvalue="npm.commpile" />
       </list>
     </recent_temporary>
@@ -102,7 +131,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1682720300951</updated>
-      <workItem from="1682720301867" duration="22519000" />
+      <workItem from="1682720301867" duration="26631000" />
+      <workItem from="1683142631457" duration="842000" />
+      <workItem from="1683143510407" duration="1049000" />
+      <workItem from="1683144565452" duration="353000" />
+      <workItem from="1683144921974" duration="1625000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1682720711726</created>
@@ -146,7 +179,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682773269189</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add save odd, convert to mp3, transcription file">
+      <created>1682876007894</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1682876007894</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,7 +208,9 @@
     <MESSAGE value="add gitignore" />
     <MESSAGE value="update gitignore, add tsc, nodemon" />
     <MESSAGE value="'hello world' bot" />
-    <option name="LAST_COMMIT_MESSAGE" value="'hello world' bot" />
+    <MESSAGE value="add save odd, convert to mp3, transcription file" />
+    <MESSAGE value="add linters" />
+    <option name="LAST_COMMIT_MESSAGE" value="add linters" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
