@@ -23,7 +23,7 @@ class OggConvertor {
         })
       })
     } catch (e: any) {
-      console.log('Error while delete ogg ' + JSON.stringify(e))
+      console.log('Error while delete ' + JSON.stringify(e))
       return await Promise.resolve(false)
     }
   }
@@ -35,7 +35,7 @@ class OggConvertor {
         method: 'GET',
         responseType: 'stream',
       })
-      return await new Promise((resolve, reject) => {
+      return await new Promise(resolve => {
         const stream = createWriteStream(oggPath)
         response.data.pipe(stream)
         stream.on('finish', () => {

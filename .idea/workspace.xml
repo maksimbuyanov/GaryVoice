@@ -4,22 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="234e1165-f591-4137-b7c7-cbb735dc64c6" name="Changes" comment="add save odd, convert to mp3, transcription file">
-      <change afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.prettierrc.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nodemon.json" afterDir="false" />
+    <list default="true" id="234e1165-f591-4137-b7c7-cbb735dc64c6" name="Changes" comment="добавил работу с чатом">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Bot.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bot.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ogg.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ogg.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Openai.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Openai.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/onTextMessage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/onTextMessage.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/start.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/start.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +62,7 @@
       <recent name="$PROJECT_DIR$/src/actions/start.ts" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.lint:ts:fix">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="commpile" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -116,8 +105,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.lint:ts:fix" />
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.lint:ts:fix" />
         <item itemvalue="npm.nodemon" />
         <item itemvalue="npm.commpile" />
       </list>
@@ -135,7 +124,7 @@
       <workItem from="1683142631457" duration="842000" />
       <workItem from="1683143510407" duration="1049000" />
       <workItem from="1683144565452" duration="353000" />
-      <workItem from="1683144921974" duration="1625000" />
+      <workItem from="1683144921974" duration="3138000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1682720711726</created>
@@ -186,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682876007894</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add linters">
+      <created>1683146577112</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1683146577112</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,7 +206,8 @@
     <MESSAGE value="'hello world' bot" />
     <MESSAGE value="add save odd, convert to mp3, transcription file" />
     <MESSAGE value="add linters" />
-    <option name="LAST_COMMIT_MESSAGE" value="add linters" />
+    <MESSAGE value="добавил работу с чатом" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавил работу с чатом" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

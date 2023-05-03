@@ -1,4 +1,5 @@
 import { Configuration, OpenAIApi } from 'openai'
+import type { ChatCompletionRequestMessage } from 'openai'
 import { createReadStream } from 'fs'
 import config from 'config'
 import { ogg } from './Ogg.js'
@@ -25,7 +26,19 @@ class Openai {
       throw new Error('Error while deleted')
     } catch (e: unknown) {
       console.log('Error while transcription ' + JSON.stringify(e))
+      throw new Error('error')
+    }
+  }
 
+  async chat(messages: ChatCompletionRequestMessage[]): Promise<string> {
+    try {
+      const response = await this.openai.createChatCompletion({
+        model: 'gpt-3.5-turbo',
+        messages,
+      })
+      return response.data.choices[0].message?.content ?? 'Чат не ответил...'
+    } catch (e) {
+      console.log('Error while transcription ' + JSON.stringify(e))
       throw new Error('error')
     }
   }
