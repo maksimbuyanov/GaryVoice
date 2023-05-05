@@ -2,7 +2,7 @@ import { Configuration, OpenAIApi } from 'openai'
 import type { ChatCompletionRequestMessage } from 'openai'
 import { createReadStream } from 'fs'
 import config from 'config'
-import { ogg } from './Ogg.js'
+import { audio } from './Audio.js'
 
 class Openai {
   constructor(apiKey: string) {
@@ -21,7 +21,7 @@ class Openai {
         'whisper-1'
       )
 
-      const isSuccessDeleted = await ogg.deleteFile(filePath)
+      const isSuccessDeleted = await audio.deleteFile(filePath)
       if (isSuccessDeleted) return response.data.text
       throw new Error('Error while deleted')
     } catch (e: unknown) {

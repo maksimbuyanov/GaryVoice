@@ -6,7 +6,7 @@ import installer from '@ffmpeg-installer/ffmpeg'
 
 const rootPath = dirname('./')
 
-class OggConvertor {
+class AudioConvertor {
   constructor() {
     this.voicesPath = resolve(rootPath, 'voices')
     ffmpeg.setFfmpegPath(installer.path)
@@ -73,4 +73,4 @@ class OggConvertor {
   }
 }
 
-export const ogg = new OggConvertor()
+export const audio = new AudioConvertor()

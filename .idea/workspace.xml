@@ -4,15 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="234e1165-f591-4137-b7c7-cbb735dc64c6" name="Changes" comment="добавил работу с чатом">
-      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
+    <list default="true" id="234e1165-f591-4137-b7c7-cbb735dc64c6" name="Changes" comment="добавил сохранение контекста">
+      <change afterPath="$PROJECT_DIR$/src/Actions.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Command.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Session.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Bot.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bot.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ogg.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ogg.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ogg.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Audio.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Openai.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Openai.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/onTextMessage.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/start.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,6 +64,9 @@
       <recent name="$PROJECT_DIR$/config/default.json" />
     </key>
     <key name="es6.move.members.recent.items">
+      <recent name="$PROJECT_DIR$/src/types.ts" />
+      <recent name="$PROJECT_DIR$/src/constants.ts" />
+      <recent name="$PROJECT_DIR$/src/Bot.ts" />
       <recent name="$PROJECT_DIR$/src/actions/start.ts" />
     </key>
   </component>
@@ -129,7 +132,7 @@
       <workItem from="1683142631457" duration="842000" />
       <workItem from="1683143510407" duration="1049000" />
       <workItem from="1683144565452" duration="353000" />
-      <workItem from="1683144921974" duration="7893000" />
+      <workItem from="1683144921974" duration="13534000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1682720711726</created>
@@ -194,7 +197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683148086084</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="добавил сохранение контекста">
+      <created>1683153458264</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1683153458264</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,7 +229,8 @@
     <MESSAGE value="add save odd, convert to mp3, transcription file" />
     <MESSAGE value="add linters" />
     <MESSAGE value="добавил работу с чатом" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавил работу с чатом" />
+    <MESSAGE value="добавил сохранение контекста" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавил сохранение контекста" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
