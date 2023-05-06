@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "yarn exec nodemon",
+    "build": "tsc",
     "start": "node ./dist/main.js",
     "lint:ts": "eslint \"**/*.{ts,tsx}\"",
     "lint:ts:fix": "eslint \"**/*.{ts,tsx}\" --fix"
@@ -29,7 +30,6 @@
     "nodemon": "^2.0.22",
     "prettier": "^2.8.8",
     "ts-node": "^10.9.1",
-    "tsc": "^2.0.4",
     "typescript": "^5.0.4"
   },
   "dependencies": {
