@@ -1,9 +1,12 @@
-import type { ChatCompletionRequestMessage } from 'openai'
 import { session } from 'telegraf'
+import type { Session } from 'src/types.js'
 
-export const INITIAL_SESSION: { messages: ChatCompletionRequestMessage[] } = {
-  messages: [],
+export const createNewSession = (): Session => {
+  return {
+    messages: [],
+  }
 }
+
 export const sessionMiddleware = session({
-  defaultSession: () => INITIAL_SESSION,
+  defaultSession: createNewSession,
 })

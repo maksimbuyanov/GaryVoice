@@ -16,12 +16,18 @@ bot.command('start', commandForStart)
 bot.on(message('text'), async ctx => {
   try {
     const text = ctx.message.text
+    await ctx.reply(code('Начинаю обработку'), { disable_notification: true })
+
     ctx.session.messages.push({ role: 'user', content: text })
     const response = await openai.chat(ctx.session.messages)
+
     ctx.session.messages.push({ role: 'assistant', content: response })
     await ctx.reply(response)
   } catch (e: any) {
     console.log('Error while text message ' + JSON.stringify(e))
+    await ctx.reply(code(`Ошибка :(`), {
+      disable_notification: true,
+    })
   }
 })
 
@@ -30,10 +36,12 @@ bot.on(message('voice', 'forward_from'), async ctx => {
     const link = await ctx.telegram.getFileLink(ctx.message.voice.file_id)
     const userId = ctx.message.message_id.toString()
     await ctx.reply(code('Начинаю обработку'), { disable_notification: true })
+
     const oggPath = await audio.create(link.href, userId)
     const mp3Path = await audio.toMp3(oggPath, userId)
     const transcriptedText = await openai.transcription(mp3Path)
-    await ctx.reply(code(`Услышал как:" ${transcriptedText} "`), {
+
+    await ctx.reply(code(`Я разобрал:" ${transcriptedText} "`), {
       disable_notification: true,
     })
   } catch (e: any) {
@@ -46,17 +54,19 @@ bot.on(message('voice'), async ctx => {
     const link = await ctx.telegram.getFileLink(ctx.message.voice.file_id)
     const userId = ctx.message.message_id.toString()
     await ctx.reply(code('Начинаю обработку'), { disable_notification: true })
+
     const oggPath = await audio.create(link.href, userId)
     const mp3Path = await audio.toMp3(oggPath, userId)
     const transcriptedText = await openai.transcription(mp3Path)
+
     await ctx.reply(code(`Услышал как:" ${transcriptedText} "`), {
       disable_notification: true,
     })
-    ctx.session.messages.push({ role: 'user', content: transcriptedText })
+
     const messages: ChatCompletionRequestMessage[] = [
       { role: 'user', content: transcriptedText },
     ]
-
+    ctx.session.messages.push(messages[0])
     const response = await openai.chat(messages)
     ctx.session.messages.push({ role: 'assistant', content: response })
     await ctx.reply(response)

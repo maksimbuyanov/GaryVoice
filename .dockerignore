@@ -1,0 +1,7 @@
+node_modules
+.eslintrc.json
+.prettierrc.json
+Dockerfile
+nodemon.json
+yarn-error.log
+yarn.lock

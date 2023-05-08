@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="234e1165-f591-4137-b7c7-cbb735dc64c6" name="Changes" comment="добавил докер файл и мейк файл">
+    <list default="true" id="234e1165-f591-4137-b7c7-cbb735dc64c6" name="Changes" comment="добавил компиляцию ts">
+      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Command.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Command.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Session.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Session.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +21,9 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -33,6 +41,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
     "javascript.nodejs.core.library.configured.version": "18.15.0",
     "javascript.nodejs.core.library.typings.version": "18.15.0",
     "last_opened_file_path": "/Users/maksim/PhpstormProjects/gary_voice/node_modules",
@@ -46,7 +55,7 @@
     "nodejs_package_manager_path": "yarn",
     "prettierjs.PrettierConfiguration.Package": "/Users/maksim/PhpstormProjects/gary_voice/node_modules/prettier",
     "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "/Applications/PhpStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external"
+    "ts.external.directory.path": "/Users/maksim/PhpstormProjects/gary_voice/node_modules/typescript/lib"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -54,6 +63,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/config/" />
       <recent name="$PROJECT_DIR$/config/default.json" />
     </key>
@@ -69,6 +79,19 @@
       <makefile filename="$PROJECT_DIR$/Makefile" target="build" workingDirectory="" arguments="">
         <envs />
       </makefile>
+      <method v="2" />
+    </configuration>
+    <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="containerName" value="" />
+          <option name="sourceFilePath" value="Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile" />
       <method v="2" />
     </configuration>
     <configuration name="compile" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
@@ -101,23 +124,13 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="nodemon" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="nodemon" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.dev" />
         <item itemvalue="Makefile Target.build" />
+        <item itemvalue="Docker.Dockerfile" />
+        <item itemvalue="npm.dev" />
         <item itemvalue="npm.compile" />
         <item itemvalue="npm.lint:ts:fix" />
-        <item itemvalue="npm.nodemon" />
       </list>
     </recent_temporary>
   </component>
@@ -133,7 +146,8 @@
       <workItem from="1683142631457" duration="842000" />
       <workItem from="1683143510407" duration="1049000" />
       <workItem from="1683144565452" duration="353000" />
-      <workItem from="1683144921974" duration="21104000" />
+      <workItem from="1683144921974" duration="23315000" />
+      <workItem from="1683550335038" duration="3194000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1682720711726</created>
@@ -219,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683385409627</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="добавил компиляцию ts">
+      <created>1683400897579</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1683400897579</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,7 +268,8 @@
     <MESSAGE value="добавил сохранение контекста" />
     <MESSAGE value="поправил типы сессии" />
     <MESSAGE value="добавил докер файл и мейк файл" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавил докер файл и мейк файл" />
+    <MESSAGE value="добавил компиляцию ts" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавил компиляцию ts" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
