@@ -16,12 +16,15 @@ bot.command('start', commandForStart)
 bot.on(message('text'), async ctx => {
   try {
     const text = ctx.message.text
-    await ctx.reply(code('Начинаю обработку'), { disable_notification: true })
-
+    const { message_id } = await ctx.reply(code('Начинаю обработку'), {
+      disable_notification: true,
+    })
     ctx.session.messages.push({ role: 'user', content: text })
     const response = await openai.chat(ctx.session.messages)
 
     ctx.session.messages.push({ role: 'assistant', content: response })
+    await ctx.deleteMessage(message_id)
+
     await ctx.reply(response)
   } catch (e: any) {
     console.log('Error while text message ' + JSON.stringify(e))
@@ -34,13 +37,15 @@ bot.on(message('text'), async ctx => {
 bot.on(message('voice', 'forward_from'), async ctx => {
   try {
     const link = await ctx.telegram.getFileLink(ctx.message.voice.file_id)
-    const userId = ctx.message.message_id.toString()
-    await ctx.reply(code('Начинаю обработку'), { disable_notification: true })
+    const messageId = ctx.message.message_id.toString()
+    const { message_id } = await ctx.reply(code('Начинаю обработку'), {
+      disable_notification: true,
+    })
 
-    const oggPath = await audio.create(link.href, userId)
-    const mp3Path = await audio.toMp3(oggPath, userId)
+    const oggPath = await audio.create(link.href, messageId)
+    const mp3Path = await audio.toMp3(oggPath, messageId)
     const transcriptedText = await openai.transcription(mp3Path)
-
+    await ctx.deleteMessage(message_id)
     await ctx.reply(code(`Я разобрал:" ${transcriptedText} "`), {
       disable_notification: true,
     })
@@ -53,12 +58,14 @@ bot.on(message('voice'), async ctx => {
   try {
     const link = await ctx.telegram.getFileLink(ctx.message.voice.file_id)
     const userId = ctx.message.message_id.toString()
-    await ctx.reply(code('Начинаю обработку'), { disable_notification: true })
+    const { message_id } = await ctx.reply(code('Начинаю обработку'), {
+      disable_notification: true,
+    })
 
     const oggPath = await audio.create(link.href, userId)
     const mp3Path = await audio.toMp3(oggPath, userId)
     const transcriptedText = await openai.transcription(mp3Path)
-
+    await ctx.deleteMessage(message_id)
     await ctx.reply(code(`Услышал как:" ${transcriptedText} "`), {
       disable_notification: true,
     })
