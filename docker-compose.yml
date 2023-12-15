@@ -1,6 +1,6 @@
 version: '3'
 
 services:
-  gary_voice_bot:
+  gary_voice_bot_c:
     image: gary_voice_bot
     restart: always
