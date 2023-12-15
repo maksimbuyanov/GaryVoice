@@ -1,0 +1,6 @@
+version: '3'
+
+services:
+  gary_voice_bot:
+    image: gary_voice_bot
+    restart: always

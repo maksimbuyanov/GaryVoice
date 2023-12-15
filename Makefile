@@ -1,5 +1,18 @@
+NAME := gary_voice_bot
+
 build:
-	docker build -t gary_voice_bot --build-arg CACHEBUST=$(date +%s) .
+	docker build -t $(NAME) .
 
 run:
-	docker run -d -p 3000:3000 --name gary_voice_bot --restart always gary_voice_bot
+	docker run -d --name $(NAME) $(NAME)
+
+stop:
+	docker stop $(NAME)
+
+rm:
+	docker rm $(NAME)
+
+rmi:
+	docker rmi $(NAME)
+
+reset: 	stop rm rmi build run
